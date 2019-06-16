@@ -1,0 +1,93 @@
+.login-popup {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgba(75,130,166,.8);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  .login-popup-content-wrap {
+    width: 40%;
+    position: relative;
+    margin: 0 auto;
+    h2 {
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin: 30px 0;
+      display: inline-block;
+    }
+    .login-side {
+      width: 30%;
+      background-color: #e9f6fa;
+      text-align: center;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      float: left;
+      h2 {
+        color: #88becc;
+      }
+      .fb-login {
+        background-color: #3c5a99;
+        margin: 15px auto;
+      }
+      .google-login {
+        background-color: #dc4e40;
+        margin: 15px auto;
+      }
+
+      .login-btn {
+        background-color: $main-color;
+        border: none;
+        margin: 40px auto;
+        display: inline-block;
+      }
+    }
+    
+    .reg-side {
+      width: 70%;
+      background-color: #fff;
+      text-align: center;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      float: left;
+      h2 {
+        color: $main-color;
+        width: 100%;
+      }
+      .reg-col {
+        width: 50%;
+        float: left;
+      }
+      .be-cleaner {
+        width: 100%;
+        background-color: $main-color;
+        float: left;
+        h2 {
+          margin: 12.5px auto;
+          color: #fff;
+        }
+      }
+      .reg-btn {
+        background-color: $main-green;
+        border: none;
+        margin: 0 auto;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.seperator-h {
+  width: 80%;
+  margin: 40px auto;
+  border-top: 3px dashed #d2e8ef;
+}
+
+.seperator-v {
+
+  //margin: 40px auto;
+  border-right: 3px dashed #d2e8ef;
+
+}
