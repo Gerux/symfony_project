@@ -5,8 +5,10 @@
   top: 0;
   background-color: rgba(75,130,166,.8);
   z-index: 100;
-  display: flex;
+  display: none;
   align-items: center;
+  opacity: 1;
+  transition : opacity .4s ease-in-out;
   .login-popup-content-wrap {
     width: 40%;
     position: relative;
@@ -52,6 +54,22 @@
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px;
       float: left;
+
+      .exit-login {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-weight: 700;
+        border: 1px solid $secondary-color;
+        border-radius: 50%;
+        padding: 4px 8px;
+      }
+
+      .exit-login:hover {
+        background-color: $secondary-color;
+        color: #fff;
+      }
+
       h2 {
         color: $main-color;
         width: 100%;

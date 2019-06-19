@@ -1,3 +1,6 @@
+body {
+  background-color: $body-bg;
+}
 .container {
   width: 1180px;
   margin: 0 auto;
@@ -5,4 +8,14 @@
 
 .col-50 {
   width: 50%;
+}
+
+.home-header-container {
+  border-radius: 5px;
+  margin-top: 140px;
+  width: 100%;
+  height: 550px;
+  padding: 0;
+  background: url(../../public/images/homepage_header.jpg) 50%/cover no-repeat;
+  background-position: 0 -95px;
 }
