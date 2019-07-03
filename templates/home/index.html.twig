@@ -1,21 +1,90 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Nevark.lt{% endblock %}
 
 {% block body %}
 
 <div class="container">
     <div class="home-header-container"></div>
 
+    {#City Select section#}
+
     <section class="content-wrap">
-        <h1 class="content-title">Siūlomos paslaugos</h1>
+        {#<h1 class="content-title">Siūlomos paslaugos</h1>#}
         <div class="city-select-wrap">
-            <div class="city-wrap">
-                <span>Miestas</span>
-                <span class="choosen-city">Visi miestai</span>
+            <div class="city-wrap row">
+                <div class="chosen-city col-50">
+                    <span>Miestas</span>
+                    <span id="city">
+                    {% if selectedCity is not null %}
+                        {{ selectedCity.title }}
+                    {% else %}
+                        Visi miestai
+                    {% endif %}
+                    </span>
+                </div>
+                <div class="col-50">
+                    <button id="show-cities" class="btn btn-main-color">Pakeisti miestą</button>
+                </div>
             </div>
-            <button>Pakeisti miestą</button>
+            <form action="" method="POST" class="city-form row" style="display: none">
+                <div class="col-50">
+                    <select name="city" id="" class="select">
+                        <option value="" selected disabled hidden>
+                            Visi Miestai
+                        </option>
+                    {% for city in cities %}
+                        <option value="{{ city.id }}">{{ city.title }}</option>
+                    {% endfor %}
+                    </select>
+                </div>
+                <div class="col-50">
+                    <button id="show-cities" class="btn btn-submit">Pasirinkti</button>
+                </div>
+            </form>
         </div>
     </section>
+
+    {#Services select section#}
+
+    <section class="content-wrap">
+        <h1 class="content-title">Siūlomos paslaugos Jūsų mieste</h1>
+        <div class="service-wrap">
+            <div class="row">
+                <div class="col-25">
+                    <div class="single-service">
+                        <h3 class="service-title">Tvarkytojas</h3>
+                        <img src="images/services/service-cleaner.png" alt="cleaning">
+                        <button class="btn btn-main-color">Užsakyti</button>
+                    </div>
+                </div>
+                <div class="col-25">
+                    <div class="single-service">
+                        <h3 class="service-title">Langų valymas</h3>
+                        <img src="images/services/service-windows.png" alt="cleaning">
+                        <button class="btn btn-main-color">Užsakyti</button>
+                    </div>
+                </div>
+                <div class="col-25">
+                    <div class="single-service">
+                        <h3 class="service-title">Auklė</h3>
+                        <img src="images/services/service-nany.png" alt="cleaning">
+                        <button class="btn btn-main-color">Užsakyti</button>
+                    </div>
+                </div>
+                <div class="col-25">
+                    <div class="single-service">
+                        <h3 class="service-title">Drabužių valymas</h3>
+                        <img src="images/services/service-laundry.png" alt="cleaning">
+                        <button class="btn btn-main-color">Užsakyti</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="" class="be-cleaner">
+        Tapk darbuotoju
+    </a>
 </div>
 {% endblock %}

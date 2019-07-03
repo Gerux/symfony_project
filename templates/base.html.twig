@@ -6,6 +6,7 @@
         {% block stylesheets %}{{ encore_entry_link_tags('styles') }}{% endblock %}
     </head>
     <body>
+    {% block navbar %}
         <nav>
             <div class="navbar">
                 <div class="navbar-top"></div>
@@ -22,76 +23,19 @@
                 </div>
             </div>
         </nav>
-        <div class="login-popup">
-            <div class="login-popup-content-wrap">
-                <div class="login-side">
-                    <h2>Prisijungimas</h2>
-                    <a href="" class="btn fb-login">Prisijunk / Registruokis</a>
-                    <a href="" class="btn google-login">Prisijunk / Registruokis</a>
-                    <div class="seperator-h"></div>
-                    <form action="" class="login-form">
-                        <div class="input-wrap">
-                            <label for="login-email">El. paštas</label>
-                            <input type="text" id="login-email">
-                        </div>
-                        <div class="input-wrap">
-                            <label for="login-password">Slaptažodis</label>
-                            <input type="password" id="login-password">
-                        </div>
-                        <input type="submit" class="btn login-btn">
-                    </form>
-                </div>
-                <div class="reg-side">
-                    <a href="" class="exit-login">X</a>
-                    <h2>Vartotojo registracijas</h2>
-                    <form action="" class="login-form">
-                        <div class="reg-col">
-                            <div class="input-wrap">
-                                <label for="name">Vardas</label>
-                                <input type="text" id="name">
-                            </div>
-                            <div class="input-wrap">
-                                <label for="lastname">Pavardė</label>
-                                <input type="text" id="lastname">
-                            </div>
-                            <div class="input-wrap">
-                                <label for="login-email">El. paštas</label>
-                                <input type="text" id="login-email">
-                            </div>
-                            <div class="input-wrap">
-                                <label for="phone">Telefonas</label>
-                                <input type="text" id="phone">
-                            </div>
-                            <div class="input-wrap">
-                                <label for="city">miestas</label>
-                                <select name="city" id="city">
-                                    <option value="vilnius">Vilnius</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="reg-col">
-                            <div class="input-wrap">
-                                <label for="login-email">El. paštas</label>
-                                <input type="text" id="login-email">
-                            </div>
-                            <div class="input-wrap">
-                                <label for="login-password">Slaptažodis</label>
-                                <input type="password" id="login-password">
-                            </div>
-                            <div class="checkbox-wrap">
-                                <input type="checkbox" id="privacy">
-                                <label for="privacy">Perkaičiau ir sutinku su taisyklėmis</label>
-                            </div>
-                            <input type="submit" class="btn reg-btn">
-                        </div>
-                    </form>
-                    <div class="be-cleaner">
-                        <h2>Tapk darbuotoju</h2>
-                    </div>
+    {% endblock %}
+    {% block body %}{% endblock %}
+    {% block footer %}
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-30">
+                    <img src="images/nevark-logo.png" alt="">
                 </div>
             </div>
         </div>
-        {% block body %}{% endblock %}
-        {% block javascripts %} {{ encore_entry_script_tags('app') }}{% endblock %}
+    </footer>
+    {% endblock %}
+    {% block javascripts %} {{ encore_entry_script_tags('app') }}{% endblock %}
     </body>
 </html>

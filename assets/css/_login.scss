@@ -1,101 +1,98 @@
-.login-popup {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  background-color: rgba(75,130,166,.8);
-  z-index: 100;
-  display: none;
+.login-bg {
+  background: url('../../public/images/homepage_header.jpg') /cover no-repeat;
+}
+.login-container {
+  width: 992px;
+  margin: 0 auto;
+  display: flex;
   align-items: center;
-  opacity: 1;
-  transition : opacity .4s ease-in-out;
-  .login-popup-content-wrap {
-    width: 40%;
-    position: relative;
-    margin: 0 auto;
+  height: 100vh;
+  .login-side {
+    width: 30%;
+    background-color: #e9f6fa;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     h2 {
       font-size: 30px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      margin: 30px 0;
+      padding: 20px;
+      color: #88becc;
+    }
+    .fb-login {
+      background-color: #3c5a99;
+      margin: 15px auto;
+      padding: 15px;
+      width: 80%;
+    }
+    .google-login {
+      background-color: #dc4e40;
+      margin: 15px auto;
+      padding: 15px;
+      width: 80%;
+    }
+
+    .login-btn {
+      background-color: $main-color;
+      border: 2px solid $main-color;
+      margin: 40px auto;
       display: inline-block;
+      width: 80%;
+      padding: 15px;
+      font-weight: 600;
     }
-    .login-side {
-      width: 30%;
-      background-color: #e9f6fa;
-      text-align: center;
-      border-top-left-radius: 5px;
-      border-bottom-left-radius: 5px;
-      float: left;
-      h2 {
-        color: #88becc;
-      }
-      .fb-login {
-        background-color: #3c5a99;
-        margin: 15px auto;
-      }
-      .google-login {
-        background-color: #dc4e40;
-        margin: 15px auto;
-      }
 
-      .login-btn {
-        background-color: $main-color;
-        border: none;
-        margin: 40px auto;
-        display: inline-block;
-      }
-    }
-    
-    .reg-side {
-      width: 70%;
+    .login-btn:hover {
       background-color: #fff;
-      text-align: center;
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
+      border: 2px solid $main-color;
+      color: $main-color;
+    }
+  }
+  .reg-side {
+    width: 70%;
+    background-color: #fff;
+    text-align: center;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    float: left;
+
+    h2 {
+      font-size: 30px;
+      padding: 20px;
+      color: $main-color;
+      width: 100%;
+    }
+    .reg-col {
+      width: 50%;
       float: left;
-
-      .exit-login {
-        position: absolute;
-        top: 5px;
-        right: 5px;
-        font-weight: 700;
-        border: 1px solid $secondary-color;
-        border-radius: 50%;
-        padding: 4px 8px;
-      }
-
-      .exit-login:hover {
-        background-color: $secondary-color;
-        color: #fff;
-      }
-
-      h2 {
-        color: $main-color;
-        width: 100%;
-      }
-      .reg-col {
-        width: 50%;
-        float: left;
-      }
-      .be-cleaner {
-        width: 100%;
-        background-color: $main-color;
-        float: left;
-        h2 {
-          margin: 12.5px auto;
-          color: #fff;
-        }
-      }
-      .reg-btn {
-        background-color: $main-green;
-        border: none;
-        margin: 0 auto;
-        display: inline-block;
-      }
+    }
+    .be-cleaner {
+      width: 100%;
+      background-color: $main-color;
+      border: 2px solid $main-color;
+      float: left;
+    }
+    .be-cleaner:hover {
+      background-color: #fff;
+      color: $main-color;
+      border: 2px solid $main-color;
+    }
+    .reg-btn {
+      background-color: $main-green;
+      margin: 0 auto;
+      display: inline-block;
+      width: 80%;
+      padding: 15px;
+      border: 1px solid $main-green;
+      font-weight: 600;
+    }
+    .reg-btn:hover {
+      background-color: #fff;
+      border: 2px solid $main-green;
+      color: $main-green;
     }
   }
 }
+
 
 .seperator-h {
   width: 80%;

@@ -6,8 +6,34 @@ body {
   margin: 0 auto;
 }
 
+.container-fluid {
+  width: 100%;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-100 {
+  width: 100%;
+}
+
 .col-50 {
   width: 50%;
+}
+
+.col-30 {
+  width: 33.33%;
+}
+
+.col-25 {
+  width: 25%;
+}
+
+.col-20 {
+  width: 20%;
 }
 
 .home-header-container {

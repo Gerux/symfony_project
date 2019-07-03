@@ -18,3 +18,7 @@ function showLogin(){
 function hideLogin(){
     $('.login-popup').css('display', 'none');
 }
+
+$('#show-cities').click(function(){
+    $('.city-form').toggle('slow');
+});

@@ -13,6 +13,10 @@
   .container {
     .navbar-logo {
       float: left;
+
+      img {
+        height: 72px;
+      }
     }
     .navbar-links {
       list-style: none;
